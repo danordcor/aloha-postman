@@ -1,0 +1,77 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Aloha",
+		"_postman_id": "89917d20-4945-fbfe-2bcf-32012a47e98a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Login Token",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/auth/login-token/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/auth/refresh-token/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU4ODA3OTk5NiwianRpIjoiY2UwOWE5YWU5YjY4NDI4M2E1YzZlYWE0NzE4MjcxMTQiLCJ1c2VyX2lkIjoyfQ.fb4EJelrfGrDAjc7NOIgOTV4LnclGQkxo2tbRZChFCI\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Token",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/auth/verify-token/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg3NTEzMTE2LCJqdGkiOiIyZjk0NWY1OWQ4MjY0MGM1OWRmMzA2NTVmMWM5MWU1NSIsInVzZXJfaWQiOjJ9.mM7p8N0IBaQ0tMvBJTccPFb4hKQdQcgTa6Ofad3a_Zk\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
