@@ -72,6 +72,37 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Handovers",
+			"description": "",
+			"item": [
+				{
+					"name": "Get Template",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/handovers/templates/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{valid_token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
