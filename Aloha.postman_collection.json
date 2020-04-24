@@ -25,7 +25,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+							"raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}"
 						},
 						"description": ""
 					},
@@ -45,7 +45,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU4ODA3OTk5NiwianRpIjoiY2UwOWE5YWU5YjY4NDI4M2E1YzZlYWE0NzE4MjcxMTQiLCJ1c2VyX2lkIjoyfQ.fb4EJelrfGrDAjc7NOIgOTV4LnclGQkxo2tbRZChFCI\"\n}"
+							"raw": "{\n    \"refresh\": \"{{valid_refresh}}\"\n}"
 						},
 						"description": ""
 					},
@@ -65,7 +65,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg3NTEzMTE2LCJqdGkiOiIyZjk0NWY1OWQ4MjY0MGM1OWRmMzA2NTVmMWM5MWU1NSIsInVzZXJfaWQiOjJ9.mM7p8N0IBaQ0tMvBJTccPFb4hKQdQcgTa6Ofad3a_Zk\"\n}"
+							"raw": "{\n    \"token\": \"{{valid_token}}\"\n}"
 						},
 						"description": ""
 					},
@@ -97,6 +97,62 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "List Users",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/users/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{valid_token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/users/reset_password/ ",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{valid_token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"old_password\": \"{{password}}\",\n    \"new_password1\": \"Zina2020@\",\n    \"new_password2\": \"Zina2020@\"\n}"
 						},
 						"description": ""
 					},
