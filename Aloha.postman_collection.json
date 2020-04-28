@@ -101,6 +101,81 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "List Sites",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/handovers/sites/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{valid_token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Site",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/handovers/sites/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{valid_token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update Site",
+					"request": {
+						"url": "{{host}}/api/v1/aloha/handovers/sites/1/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{valid_token}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"template\": 1,\n    \"name\": \"Update Name\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"id\": 1,\n            \"name\": \"New Name\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}"
+						},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
