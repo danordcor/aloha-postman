@@ -146,7 +146,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
+							"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"status\": \"not_concluded\",\n    \"comment\": \"Handover lógico não concluídodevido a pendências impeditivas\",\n    \"annexed\": \"Item 5.8 – Site não apresenta contadores para E-UTRAN HO SR, inter eNB S1. O inter eNB E-UTRAN HO SR X2 identifica que está ocorrendoHO Inter eNodeB.\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
 						},
 						"description": ""
 					},
