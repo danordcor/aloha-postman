@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "Aloha",
-		"_postman_id": "89917d20-4945-fbfe-2bcf-32012a47e98a",
+		"_postman_id": "efacc973-d153-096f-9258-76617197bac6",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -78,6 +78,220 @@
 			"description": "",
 			"item": [
 				{
+					"name": "Sites",
+					"description": "",
+					"item": [
+						{
+							"name": "List Sites",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/sites/",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Site",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/sites/",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"status\": \"not_concluded\",\n    \"comment\": \"Handover lógico não concluídodevido a pendências impeditivas\",\n    \"annexed\": \"Item 5.8 – Site não apresenta contadores para E-UTRAN HO SR, inter eNB S1. O inter eNB E-UTRAN HO SR X2 identifica que está ocorrendoHO Inter eNodeB.\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Site",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/sites/1/",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"template\": 1,\n    \"name\": \"Update Name\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"id\": 1,\n            \"name\": \"New Name\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Get items for Site",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/sites/1/items",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Items",
+					"description": "",
+					"item": [
+						{
+							"name": "List Items",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/items/",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Create Item",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/items/",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": true\n}\n"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Update Item",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/items/1/",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": false\n}\n"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "Partial update Item",
+							"request": {
+								"url": "{{host}}/api/v1/aloha/handovers/items/1/",
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"impediment\": false\n}\n"
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
 					"name": "Get Template",
 					"request": {
 						"url": "{{host}}/api/v1/aloha/handovers/templates/",
@@ -97,81 +311,6 @@
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "List Sites",
-					"request": {
-						"url": "{{host}}/api/v1/aloha/handovers/sites/",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{valid_token}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Create Site",
-					"request": {
-						"url": "{{host}}/api/v1/aloha/handovers/sites/",
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{valid_token}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"status\": \"not_concluded\",\n    \"comment\": \"Handover lógico não concluídodevido a pendências impeditivas\",\n    \"annexed\": \"Item 5.8 – Site não apresenta contadores para E-UTRAN HO SR, inter eNB S1. O inter eNB E-UTRAN HO SR X2 identifica que está ocorrendoHO Inter eNodeB.\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "Update Site",
-					"request": {
-						"url": "{{host}}/api/v1/aloha/handovers/sites/1/",
-						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{valid_token}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"template\": 1,\n    \"name\": \"Update Name\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"id\": 1,\n            \"name\": \"New Name\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}"
 						},
 						"description": ""
 					},
