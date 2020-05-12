@@ -1,378 +1,503 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "41ac0051-c7d6-405e-9576-25d170639e1d",
 		"name": "Aloha",
-		"_postman_id": "efacc973-d153-096f-9258-76617197bac6",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "Auth",
-			"description": "",
 			"item": [
 				{
 					"name": "Login Token",
 					"request": {
-						"url": "{{host}}/api/v1/aloha/auth/login-token/",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{host}}/api/v1/aloha/auth/login-token/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aloha",
+								"auth",
+								"login-token",
+								""
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Refresh Token",
 					"request": {
-						"url": "{{host}}/api/v1/aloha/auth/refresh-token/",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"refresh\": \"{{valid_refresh}}\"\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{host}}/api/v1/aloha/auth/refresh-token/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aloha",
+								"auth",
+								"refresh-token",
+								""
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Verify Token",
 					"request": {
-						"url": "{{host}}/api/v1/aloha/auth/verify-token/",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"token\": \"{{valid_token}}\"\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{host}}/api/v1/aloha/auth/verify-token/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aloha",
+								"auth",
+								"verify-token",
+								""
+							]
+						}
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Handovers",
-			"description": "",
 			"item": [
 				{
 					"name": "Sites",
-					"description": "",
 					"item": [
 						{
 							"name": "List Sites",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/sites/",
 								"method": "GET",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
-								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/sites/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"sites",
+										""
+									]
+								}
 							},
 							"response": []
 						},
 						{
 							"name": "Create Site",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/sites/",
 								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"status\": \"not_concluded\",\n    \"comment\": \"Handover lógico não concluídodevido a pendências impeditivas\",\n    \"annexed\": \"Item 5.8 – Site não apresenta contadores para E-UTRAN HO SR, inter eNB S1. O inter eNB E-UTRAN HO SR X2 identifica que está ocorrendoHO Inter eNodeB.\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
+									"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"status\": \"not_concluded\",\n    \"msg_not_concluded\": \"Handover lógico não concluídodevido a pendências impeditivas\",\n    \"annexed\": \"Item 5.8 – Site não apresenta contadores para E-UTRAN HO SR, inter eNB S1. O inter eNB E-UTRAN HO SR X2 identifica que está ocorrendoHO Inter eNodeB.\",\n    \"has_bsc_name\": true,\n    \"value_bsc_name\": \"BSC05ALV\",\n    \"has_trx_setting\": true,\n    \"value_trx_setting\": \"4+4+4\",\n    \"has_rnc_name\": true,\n    \"value_rnc_name\": \"RNC02BRB\",\n    \"has_lte_frequency\": true,\n    \"value_lte_frequency\": \"1800/2600\",\n    \"has_hw_model\": true,\n    \"value_hw_model\": \"AIRSCALE\",\n    \"has_sw_version\": true,\n    \"value_sw_version\": \"SBTS18SP_ENB_0000_000377_000180\",\n    \"has_2g_name\": true,\n    \"value_2g_name\": \"S2RJOLR0063\",\n    \"has_3g_name\": true,\n    \"value_3g_name\": \"S2RJOLR0063\",\n    \"has_4g_name\": true,\n    \"value_4g_name\": \"S2RJOLR0063\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
 								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/sites/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"sites",
+										""
+									]
+								}
 							},
 							"response": []
 						},
 						{
 							"name": "Update Site",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/sites/1/",
 								"method": "PUT",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"template\": 1,\n    \"name\": \"Update Name\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"id\": 1,\n            \"name\": \"New Name\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}"
 								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/sites/1/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"sites",
+										"1",
+										""
+									]
+								}
 							},
 							"response": []
 						},
 						{
 							"name": "Get items for Site",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/sites/1/items",
 								"method": "GET",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
-								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/sites/1/items",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"sites",
+										"1",
+										"items"
+									]
+								}
 							},
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Items",
-					"description": "",
 					"item": [
 						{
 							"name": "List Items",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/items/",
 								"method": "GET",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
-								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/items/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"items",
+										""
+									]
+								}
 							},
 							"response": []
 						},
 						{
 							"name": "Create Item",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/items/",
 								"method": "POST",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": true\n}\n"
 								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/items/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"items",
+										""
+									]
+								}
 							},
 							"response": []
 						},
 						{
 							"name": "Update Item",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/items/1/",
 								"method": "PUT",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": false\n}\n"
 								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/items/1/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"items",
+										"1",
+										""
+									]
+								}
 							},
 							"response": []
 						},
 						{
 							"name": "Partial update Item",
 							"request": {
-								"url": "{{host}}/api/v1/aloha/handovers/items/1/",
 								"method": "PATCH",
 								"header": [
 									{
 										"key": "Content-Type",
-										"value": "application/json",
-										"description": ""
+										"value": "application/json"
 									},
 									{
 										"key": "Authorization",
-										"value": "Bearer {{valid_token}}",
-										"description": ""
+										"value": "Bearer {{valid_token}}"
 									}
 								],
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"impediment\": false\n}\n"
 								},
-								"description": ""
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/items/1/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"items",
+										"1",
+										""
+									]
+								}
 							},
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Get Template",
 					"request": {
-						"url": "{{host}}/api/v1/aloha/handovers/templates/",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer {{valid_token}}",
-								"description": ""
+								"value": "Bearer {{valid_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
-						},
-						"description": ""
+						"url": {
+							"raw": "{{host}}/api/v1/aloha/handovers/templates/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aloha",
+								"handovers",
+								"templates",
+								""
+							]
+						}
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Users",
-			"description": "",
 			"item": [
 				{
 					"name": "List Users",
 					"request": {
-						"url": "{{host}}/api/v1/aloha/users/",
 						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer {{valid_token}}",
-								"description": ""
+								"value": "Bearer {{valid_token}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
-						},
-						"description": ""
+						"url": {
+							"raw": "{{host}}/api/v1/aloha/users/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aloha",
+								"users",
+								""
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Change Password",
 					"request": {
-						"url": "{{host}}/api/v1/aloha/users/reset_password/ ",
 						"method": "PATCH",
 						"header": [
 							{
 								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
+								"value": "application/json"
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer {{valid_token}}",
-								"description": ""
+								"value": "Bearer {{valid_token}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\n    \"old_password\": \"{{password}}\",\n    \"new_password1\": \"Zina2020@\",\n    \"new_password2\": \"Zina2020@\"\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "{{host}}/api/v1/aloha/users/reset_password/ ",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"aloha",
+								"users",
+								"reset_password",
+								" "
+							]
+						}
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }
