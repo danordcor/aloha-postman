@@ -243,6 +243,55 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "List  Filtered Sites",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}"
+									}
+								],
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/sites/?name=RRJO&request_by=Oi&created_at_after=2020-05-01&created_at_before=2020-05-31",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"sites",
+										""
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "RRJO"
+										},
+										{
+											"key": "request_by",
+											"value": "Oi"
+										},
+										{
+											"key": "created_at_after",
+											"value": "2020-05-01"
+										},
+										{
+											"key": "created_at_before",
+											"value": "2020-05-31"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},
