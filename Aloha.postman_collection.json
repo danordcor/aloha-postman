@@ -259,7 +259,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}/api/v1/aloha/handovers/sites/?name=RRJO&request_by=Oi&created_at_after=2020-05-01&created_at_before=2020-05-31",
+									"raw": "{{host}}/api/v1/aloha/handovers/sites/?name=RRJO&status=concluded&request_by=Oi&created_at_after=2020-05-01&created_at_before=2020-05-31",
 									"host": [
 										"{{host}}"
 									],
@@ -275,6 +275,10 @@
 										{
 											"key": "name",
 											"value": "RRJO"
+										},
+										{
+											"key": "status",
+											"value": "concluded"
 										},
 										{
 											"key": "request_by",
@@ -432,6 +436,49 @@
 										"handovers",
 										"items",
 										"1",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Item upload attached",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/daniel/Documents/zina/Aloha/Documents/HandoverLogico.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/items/1/attach/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"items",
+										"1",
+										"attach",
 										""
 									]
 								}
