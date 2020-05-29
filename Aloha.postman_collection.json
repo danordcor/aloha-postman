@@ -10,6 +10,20 @@
 			"item": [
 				{
 					"name": "Login Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c9a36b22-e47c-48bf-971c-44b9598c5aae",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"valid_token\", data.token);",
+									"postman.setEnvironmentVariable(\"valid_refresh\", data.refresh_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [
@@ -41,6 +55,19 @@
 				},
 				{
 					"name": "Refresh Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "46a08bba-d36c-47b1-8f1a-510652699f02",
+								"exec": [
+									"var data = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"valid_token\", data.access);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [
@@ -522,6 +549,57 @@
 										"handovers",
 										"attacheds",
 										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create attached",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/daniel/Documents/zina/Aloha/Documents/HandoverLogico.pdf"
+										},
+										{
+											"key": "hand_over",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "section_items",
+											"value": "1,2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/attacheds/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"attacheds",
 										""
 									]
 								}
