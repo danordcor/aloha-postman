@@ -534,11 +534,11 @@
 									}
 								],
 								"body": {
-									"mode": "formdata",
-									"formdata": []
+									"mode": "raw",
+									"raw": ""
 								},
 								"url": {
-									"raw": "{{host}}/api/v1/aloha/handovers/attacheds/2/",
+									"raw": "{{host}}/api/v1/aloha/handovers/attacheds/1/",
 									"host": [
 										"{{host}}"
 									],
@@ -548,7 +548,7 @@
 										"aloha",
 										"handovers",
 										"attacheds",
-										"2",
+										"1",
 										""
 									]
 								}
@@ -601,6 +601,48 @@
 										"handovers",
 										"attacheds",
 										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete attached for one item",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/attacheds/1/?item=1",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"attacheds",
+										"1",
+										""
+									],
+									"query": [
+										{
+											"key": "item",
+											"value": "1"
+										}
 									]
 								}
 							},
