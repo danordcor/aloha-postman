@@ -139,6 +139,18 @@
 					"item": [
 						{
 							"name": "List Sites",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "5bf72c9b-0643-42a1-acfe-c5aa48a08db2",
+										"exec": [
+											"//view_handover"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "GET",
 								"header": [
@@ -170,6 +182,18 @@
 						},
 						{
 							"name": "Create Site",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "728b7c18-d1f3-425e-8ee8-2e9eec602dc6",
+										"exec": [
+											"//add_handover"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "POST",
 								"header": [
@@ -205,6 +229,18 @@
 						},
 						{
 							"name": "Update Site",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "623c9175-9aab-4970-817b-cb5e850c8b6e",
+										"exec": [
+											"//change_handover"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -241,6 +277,18 @@
 						},
 						{
 							"name": "Get items for Site",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "c8d21c0a-8620-4361-b378-6f420dde666d",
+										"exec": [
+											"//view_handover"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "GET",
 								"header": [
@@ -273,6 +321,18 @@
 						},
 						{
 							"name": "List  Filtered Sites",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "9035ab98-a69c-4e09-9aca-25199a1bee29",
+										"exec": [
+											"//view_handover"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "GET",
 								"header": [
