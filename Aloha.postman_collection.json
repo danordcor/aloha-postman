@@ -393,6 +393,18 @@
 					"item": [
 						{
 							"name": "List Items",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ce7295b9-568a-46af-b745-f322cf570146",
+										"exec": [
+											"//view_item"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "GET",
 								"header": [
@@ -424,6 +436,18 @@
 						},
 						{
 							"name": "Create Item",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "f66ed35d-3177-4524-8761-a30707fe5bdd",
+										"exec": [
+											"//add_item"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "POST",
 								"header": [
@@ -459,6 +483,18 @@
 						},
 						{
 							"name": "Update Item",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "9446d17f-0540-4a9d-9995-99f63eba0c29",
+										"exec": [
+											"//change_item"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "PUT",
 								"header": [
@@ -495,6 +531,18 @@
 						},
 						{
 							"name": "Partial update Item",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "14aacaae-b3b9-4cfe-939c-ade8c2f2843e",
+										"exec": [
+											"//change_item"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "PATCH",
 								"header": [
@@ -531,6 +579,18 @@
 						},
 						{
 							"name": "Item upload attached",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "7f58a204-5990-4700-99b8-3fe3dc6cb100",
+										"exec": [
+											"//add_attached"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "POST",
 								"header": [
@@ -581,6 +641,18 @@
 					"item": [
 						{
 							"name": "Delete attached",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "58fef35e-2fa6-488b-a918-9c2e1f635925",
+										"exec": [
+											"//delete_attached"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "DELETE",
 								"header": [
@@ -617,6 +689,18 @@
 						},
 						{
 							"name": "Create attached",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "0e19f112-787c-4909-833a-9c6485a23cd1",
+										"exec": [
+											"//add_attached"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "POST",
 								"header": [
@@ -668,6 +752,18 @@
 						},
 						{
 							"name": "Delete attached for one item",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "e1d624e2-6eef-4dc8-9ce4-c07a8afa9ece",
+										"exec": [
+											"//delete_attached"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"request": {
 								"method": "DELETE",
 								"header": [
