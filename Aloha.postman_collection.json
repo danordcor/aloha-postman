@@ -145,7 +145,7 @@
 									"script": {
 										"id": "5bf72c9b-0643-42a1-acfe-c5aa48a08db2",
 										"exec": [
-											"//view_handover"
+											"//handovers.view_handover"
 										],
 										"type": "text/javascript"
 									}
@@ -188,7 +188,7 @@
 									"script": {
 										"id": "728b7c18-d1f3-425e-8ee8-2e9eec602dc6",
 										"exec": [
-											"//add_handover"
+											"//handovers.add_handover"
 										],
 										"type": "text/javascript"
 									}
@@ -235,7 +235,7 @@
 									"script": {
 										"id": "623c9175-9aab-4970-817b-cb5e850c8b6e",
 										"exec": [
-											"//change_handover"
+											"//handovers.change_handover"
 										],
 										"type": "text/javascript"
 									}
@@ -283,7 +283,7 @@
 									"script": {
 										"id": "c8d21c0a-8620-4361-b378-6f420dde666d",
 										"exec": [
-											"//view_handover"
+											"//handovers.view_handover"
 										],
 										"type": "text/javascript"
 									}
@@ -327,7 +327,7 @@
 									"script": {
 										"id": "9035ab98-a69c-4e09-9aca-25199a1bee29",
 										"exec": [
-											"//view_handover"
+											"//handovers.view_handover"
 										],
 										"type": "text/javascript"
 									}
@@ -399,7 +399,7 @@
 									"script": {
 										"id": "ce7295b9-568a-46af-b745-f322cf570146",
 										"exec": [
-											"//view_item"
+											"//handovers.view_item"
 										],
 										"type": "text/javascript"
 									}
@@ -442,7 +442,7 @@
 									"script": {
 										"id": "f66ed35d-3177-4524-8761-a30707fe5bdd",
 										"exec": [
-											"//add_item"
+											"//handovers.add_item"
 										],
 										"type": "text/javascript"
 									}
@@ -489,7 +489,7 @@
 									"script": {
 										"id": "9446d17f-0540-4a9d-9995-99f63eba0c29",
 										"exec": [
-											"//change_item"
+											"//handovers.change_item"
 										],
 										"type": "text/javascript"
 									}
@@ -537,7 +537,7 @@
 									"script": {
 										"id": "14aacaae-b3b9-4cfe-939c-ade8c2f2843e",
 										"exec": [
-											"//change_item"
+											"//handovers.change_item"
 										],
 										"type": "text/javascript"
 									}
@@ -585,7 +585,7 @@
 									"script": {
 										"id": "7f58a204-5990-4700-99b8-3fe3dc6cb100",
 										"exec": [
-											"//add_attached"
+											"//handovers.add_attached"
 										],
 										"type": "text/javascript"
 									}
@@ -647,7 +647,7 @@
 									"script": {
 										"id": "58fef35e-2fa6-488b-a918-9c2e1f635925",
 										"exec": [
-											"//delete_attached"
+											"//handovers.delete_attached"
 										],
 										"type": "text/javascript"
 									}
@@ -695,7 +695,7 @@
 									"script": {
 										"id": "0e19f112-787c-4909-833a-9c6485a23cd1",
 										"exec": [
-											"//add_attached"
+											"//handovers.add_attached"
 										],
 										"type": "text/javascript"
 									}
@@ -758,7 +758,7 @@
 									"script": {
 										"id": "e1d624e2-6eef-4dc8-9ce4-c07a8afa9ece",
 										"exec": [
-											"//delete_attached"
+											"//handovers.delete_attached"
 										],
 										"type": "text/javascript"
 									}
