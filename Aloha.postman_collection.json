@@ -17,8 +17,8 @@
 								"id": "c9a36b22-e47c-48bf-971c-44b9598c5aae",
 								"exec": [
 									"var data = JSON.parse(responseBody);",
-									"postman.setEnvironmentVariable(\"valid_token\", data.token);",
-									"postman.setEnvironmentVariable(\"valid_refresh\", data.refresh_token);"
+									"postman.setEnvironmentVariable(\"valid_token\", data.access_token);",
+									"postman.setEnvironmentVariable(\"valid_refresh\", data.refresh);"
 								],
 								"type": "text/javascript"
 							}
