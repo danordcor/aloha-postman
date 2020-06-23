@@ -34,7 +34,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}"
+							"raw": "{\n    \"username\": \"{{username}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "{{host}}/api/v1/aloha/auth/login-token/",
@@ -78,7 +81,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"refresh\": \"{{valid_refresh}}\"\n}"
+							"raw": "{\n    \"refresh\": \"{{valid_refresh}}\"\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "{{host}}/api/v1/aloha/auth/refresh-token/",
@@ -109,7 +115,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"token\": \"{{valid_token}}\"\n}"
+							"raw": "{\n    \"token\": \"{{valid_token}}\"\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "{{host}}/api/v1/aloha/auth/verify-token/",
@@ -208,7 +217,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"status\": \"not_concluded\",\n    \"msg_not_concluded\": \"Handover lógico não concluídodevido a pendências impeditivas\",\n    \"annexed\": \"Item 5.8 – Site não apresenta contadores para E-UTRAN HO SR, inter eNB S1. O inter eNB E-UTRAN HO SR X2 identifica que está ocorrendoHO Inter eNodeB.\",\n    \"has_bsc_name\": true,\n    \"value_bsc_name\": \"BSC05ALV\",\n    \"has_trx_setting\": true,\n    \"value_trx_setting\": \"4+4+4\",\n    \"has_rnc_name\": true,\n    \"value_rnc_name\": \"RNC02BRB\",\n    \"has_lte_frequency\": true,\n    \"value_lte_frequency\": \"1800/2600\",\n    \"has_hw_model\": true,\n    \"value_hw_model\": \"AIRSCALE\",\n    \"has_sw_version\": true,\n    \"value_sw_version\": \"SBTS18SP_ENB_0000_000377_000180\",\n    \"has_2g_name\": true,\n    \"value_2g_name\": \"S2RJOLR0063\",\n    \"has_3g_name\": true,\n    \"value_3g_name\": \"S2RJOLR0063\",\n    \"has_4g_name\": true,\n    \"value_4g_name\": \"S2RJOLR0063\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n"
+									"raw": "{\n    \"template\": 1,\n    \"name\": \"SRRJOLR0063\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"status\": \"not_concluded\",\n    \"msg_not_concluded\": \"Handover lógico não concluídodevido a pendências impeditivas\",\n    \"annexed\": \"Item 5.8 – Site não apresenta contadores para E-UTRAN HO SR, inter eNB S1. O inter eNB E-UTRAN HO SR X2 identifica que está ocorrendoHO Inter eNodeB.\",\n    \"has_bsc_name\": true,\n    \"value_bsc_name\": \"BSC05ALV\",\n    \"has_trx_setting\": true,\n    \"value_trx_setting\": \"4+4+4\",\n    \"has_rnc_name\": true,\n    \"value_rnc_name\": \"RNC02BRB\",\n    \"has_lte_frequency\": true,\n    \"value_lte_frequency\": \"1800/2600\",\n    \"has_hw_model\": true,\n    \"value_hw_model\": \"AIRSCALE\",\n    \"has_sw_version\": true,\n    \"value_sw_version\": \"SBTS18SP_ENB_0000_000377_000180\",\n    \"has_2g_name\": true,\n    \"value_2g_name\": \"S2RJOLR0063\",\n    \"has_3g_name\": true,\n    \"value_3g_name\": \"S2RJOLR0063\",\n    \"has_4g_name\": true,\n    \"value_4g_name\": \"S2RJOLR0063\",\n    \"supports\": [\n        {\n            \"name\": \"Jhon\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}\n",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/sites/",
@@ -255,7 +267,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"template\": 1,\n    \"name\": \"Update Name\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"id\": 1,\n            \"name\": \"New Name\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}"
+									"raw": "{\n    \"template\": 1,\n    \"name\": \"Update Name\",\n    \"address\": \"RIO DE JANEIRO\",\n    \"request_by\": \"Oi\",\n    \"request_area\": \"Engenharia\",\n    \"request_date\": \"2020-04-22\",\n    \"perform_by\": \"GDC\",\n    \"perform_area\": \"Engenharia\",\n    \"perform_date\": \"2020-04-21\",\n    \"supports\": [\n        {\n            \"id\": 1,\n            \"name\": \"New Name\",\n            \"address\": \"Doe\",\n            \"contract\": \"Zina\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/sites/1/",
@@ -383,6 +398,58 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Change state",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "728b7c18-d1f3-425e-8ee8-2e9eec602dc6",
+										"exec": [
+											"//handovers.add_handover"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{valid_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"state\": \"approved\",\n    \"description\": \"changed\"\n}\n",
+									"options": {
+										"raw": {}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/api/v1/aloha/handovers/sites/1/proceed/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"aloha",
+										"handovers",
+										"sites",
+										"1",
+										"proceed",
+										""
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -462,7 +529,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": true\n}\n"
+									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": true\n}\n",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/items/",
@@ -509,7 +579,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": false\n}\n"
+									"raw": "{\n    \"hand_over\": 1,\n    \"section_item\": 1,\n    \"log\": true,\n    \"impediment\": false\n}\n",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/items/1/",
@@ -557,7 +630,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"impediment\": false\n}\n"
+									"raw": "{\n    \"impediment\": false\n}\n",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/items/1/",
@@ -611,7 +687,10 @@
 											"type": "file",
 											"src": "/home/daniel/Documents/zina/Aloha/Documents/HandoverLogico.pdf"
 										}
-									]
+									],
+									"options": {
+										"formdata": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/items/1/attach/",
@@ -667,7 +746,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/attacheds/1/",
@@ -731,7 +813,10 @@
 											"value": "1,2",
 											"type": "text"
 										}
-									]
+									],
+									"options": {
+										"formdata": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/attacheds/",
@@ -778,7 +863,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": ""
+									"raw": "",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{host}}/api/v1/aloha/handovers/attacheds/1/?item=1",
@@ -891,7 +979,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"old_password\": \"{{password}}\",\n    \"new_password1\": \"Zina2020@\",\n    \"new_password2\": \"Zina2020@\"\n}"
+							"raw": "{\n    \"old_password\": \"{{password}}\",\n    \"new_password1\": \"Zina2020@\",\n    \"new_password2\": \"Zina2020@\"\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "{{host}}/api/v1/aloha/users/reset_password/ ",
